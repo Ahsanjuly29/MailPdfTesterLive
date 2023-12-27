@@ -9,11 +9,11 @@
 
 ## List of services inside this project
 
-1. Send Mail with or without Pdf
-2. Generate Pdf Only
-3. 
+*1. Send Mail with or without Pdf
+*2. Generate Pdf Only
+*3. 
 
 
-## Laravel Project Names
+## Laravel Project Name
 
-- **[Vehikl](Mail Pdf Tester)**
+**Mail Pdf Tester**
