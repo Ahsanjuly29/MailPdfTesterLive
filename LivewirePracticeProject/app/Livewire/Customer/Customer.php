@@ -22,6 +22,8 @@ class Customer extends Component
             "title" => $this->title,
             "age" => $this->age,
         ]);
+        
+        $this->reset();
     }
 
     public function render()
