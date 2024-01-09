@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\CustomersController;
+use App\Http\Controllers\PracticeControler;
+use App\Http\Controllers\TodoController;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Support\Facades\Route;
 
@@ -19,5 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/customers', [CustomersController::class, 'index']);
+Route::get('/customers', [PracticeControler::class, 'index']);
+
+Route::get('/todolist', [TodoController::class, 'todolist']);
 

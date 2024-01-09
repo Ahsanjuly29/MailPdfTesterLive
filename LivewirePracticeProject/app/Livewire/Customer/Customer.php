@@ -5,9 +5,13 @@ namespace App\Livewire\Customer;
 use App\Models\Customers;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Customer extends Component
 {
+
+    use WithPagination;
+
     #[Rule('required|min:2|max:50')]
     public $title;
 
@@ -22,14 +26,14 @@ class Customer extends Component
             "title" => $this->title,
             "age" => $this->age,
         ]);
-        
+
         $this->reset();
     }
 
     public function render()
     {
-        return view('livewire.clicker', [
-            'allCustomers' => Customers::all(),
+        return view('livewire.customer.customer', [
+            'allCustomers' => Customers::paginate(3),
         ]);
     }
 }
